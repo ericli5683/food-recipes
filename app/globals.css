@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4e4c8;
+  --surface: #fff7e8;
+  --surface-strong: #fffdf6;
+  --foreground: #2c1c12;
+  --muted: #7f614d;
+  --accent: #b6471b;
+  --accent-strong: #843015;
+  --stroke: #d9c3aa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-stroke: var(--stroke);
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at 100% -20%, #ffd8a8 0%, rgba(255, 216, 168, 0) 45%),
+    radial-gradient(circle at -10% 110%, #ffc39b 0%, rgba(255, 195, 155, 0) 42%),
+    linear-gradient(155deg, #fff0d8 0%, #ffe2b7 55%, #ffd7a0 100%);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), serif;
+  letter-spacing: 0.01em;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: radial-gradient(#8c5d4430 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.card-glow {
+  box-shadow:
+    0 30px 70px -50px rgba(126, 58, 23, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
